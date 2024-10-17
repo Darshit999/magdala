@@ -18,44 +18,42 @@ function App() {
 
   return (
     <>
-      <div className="h-dvh w-full bg-neutral-800">
-        <div className="h-full flex items-center justify-center">
-          <TransformWrapper>
-            <TransformComponent smooth disablePadding>
-              <div className="w-full max-w-[500px] relative transition-transform">
-                <img
-                  src="/map.webp"
-                  alt="Map"
-                  className="size-full object-contain"
-                />
+      <TransformWrapper>
+        <TransformComponent smooth disablePadding>
+          <div className="h-dvh w-screen flex justify-center items-center">
+            <div className="w-full max-w-[600px] relative transition-transform">
+              <img
+                src="/map.webp"
+                alt="Map"
+                className="size-full object-contain"
+              />
 
-                <button
-                  onClick={() => setisModal(!isModal)}
-                  className="size-3 absolute rounded-full border-2 border-white bg-blue-500"
-                  style={{
-                    top: '46.272%',
-                    left: '54.5%',
-                    transform: "translate(-50%, -50%)",
-                  }}
-                ></button>
-              </div>
-            </TransformComponent>
-          </TransformWrapper>
-        </div>
-      </div>
+              <button
+                onClick={() => setisModal(!isModal)}
+                className="size-3 absolute rounded-full border border-white bg-red-500"
+                style={{
+                  top: "46.272%",
+                  left: "54.5%",
+                  transform: "translate(-50%, -50%)",
+                }}
+              ></button>
+            </div>
+          </div>
+        </TransformComponent>
+      </TransformWrapper>
 
       {isModal && (
         <div className="h-dvh w-full fixed top-0 left-0 bg-white">
           <button
-            className="size-12 absolute right-0 top-0 flex justify-center items-center bg-red-400 text-white"
+            className="size-12 absolute right-0 top-0 z-50 flex justify-center items-center bg-red-400 text-white"
             onClick={() => setisModal(!isModal)}
           >
             <IoMdClose className="size-8" />
           </button>
 
-          <div className="h-full flex items-center justify-center">
-            <TransformWrapper smooth disablePadding>
-              <TransformComponent>
+          <TransformWrapper smooth disablePadding>
+            <TransformComponent>
+              <div className="h-dvh w-screen flex items-center justify-center">
                 <div className="w-full max-w-[800px] relative transition-transform">
                   <img
                     src="/detail.webp"
@@ -79,9 +77,9 @@ function App() {
                     ></div>
                   ))}
                 </div>
-              </TransformComponent>
-            </TransformWrapper>
-          </div>
+              </div>
+            </TransformComponent>
+          </TransformWrapper>
 
           {isPopup && (
             <div className="w-80 absolute bottom-0 left-0  bg-white">
