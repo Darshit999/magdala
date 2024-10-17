@@ -31,7 +31,7 @@ function App() {
 
                 <button
                   onClick={() => setisModal(!isModal)}
-                  className="size-2 absolute rounded-full border-2 border-white bg-blue-500"
+                  className="size-3 absolute rounded-full border-2 border-white bg-blue-500"
                   style={{
                     top: '46.272%',
                     left: '54.5%',
