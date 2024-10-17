@@ -154,7 +154,7 @@ function App() {
                 }
               }}
               disabled={currentPoints.length < 3 && isDrawing}
-              className="h-8 px-2 font-semibold bg-indigo-500 hover:bg-indigo-600 disabled:bg-indigo-400 text-white rounded"
+              className="h-8 px-2 font-semibold bg-indigo-500 hover:bg-indigo-600 disabled:bg-indigo-300 text-white rounded"
             >
               {isDrawing ? "Complete" : "Add"}
             </button>
@@ -174,7 +174,7 @@ function App() {
             <button
               onClick={handleUndo}
               disabled={currentPoints.length === 0}
-              className="size-8 px-2 font-semibold bg-red-500 hover:bg-red-600 disabled:bg-red-400 text-white rounded"
+              className="size-8 px-2 font-semibold bg-red-500 hover:bg-red-600 disabled:bg-red-300 text-white rounded"
             >
               <FaUndoAlt />
             </button>
