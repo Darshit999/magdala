@@ -19,19 +19,24 @@ function App() {
   return (
     <>
       <div className="h-dvh w-full bg-neutral-800">
-        <div className="h-full flex justify-center items-center">
+        <div className="h-full flex items-center justify-center">
           <TransformWrapper>
-            <TransformComponent>
-              <div className="relative max-w-96 bg-orange-100">
+            <TransformComponent smooth disablePadding>
+              <div className="w-full max-w-[500px] relative transition-transform">
                 <img
-                  src="/map.png"
+                  src="/map.webp"
                   alt="Map"
                   className="size-full object-contain"
                 />
 
                 <button
                   onClick={() => setisModal(!isModal)}
-                  className="size-4 absolute top-40 right-40 rounded-full border-2 border-white bg-blue-500"
+                  className="size-2 absolute rounded-full border-2 border-white bg-blue-500"
+                  style={{
+                    top: '46.272%',
+                    left: '54.5%',
+                    transform: "translate(-50%, -50%)",
+                  }}
                 ></button>
               </div>
             </TransformComponent>
@@ -51,11 +56,11 @@ function App() {
           <div className="h-full flex items-center justify-center">
             <TransformWrapper smooth disablePadding>
               <TransformComponent>
-                <div className="w-full max-w-[700px] relative transition-transform">
+                <div className="w-full max-w-[800px] relative transition-transform">
                   <img
-                    src="/detail.png"
+                    src="/detail.webp"
                     alt="Map"
-                    className="w-full bg-orange-200"
+                    className="w-full"
                     onClick={handleImageClick}
                     style={{
                       pointerEvents: "auto",
@@ -65,7 +70,7 @@ function App() {
                   {buttonPositions.map((pos, index) => (
                     <div
                       key={index}
-                      className="absolute size-4 bg-white/40"
+                      className="absolute size-4 border bg-red-600/40 border-red-600"
                       style={{
                         top: `${pos.y}%`,
                         left: `${pos.x}%`,
